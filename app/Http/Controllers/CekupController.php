@@ -25,11 +25,11 @@ class CekupController extends Controller
         
     }
 
-    // public function tampilkancekup($id){
-    //     $data = Cekup:: find($id);
-    //     //dd($data);
-    //     return view('');
-    // }
+        public function tampilkancekup($id){
+            $data = Cekup:: find($id);
+            //dd($data);
+            return view('tampilkancekup',compact('data'));
+        }
 
     public function updatedatacekup(Request $request, $id){
         $data = Cekup:: find($id);
@@ -37,8 +37,9 @@ class CekupController extends Controller
         return redirect()->route('update');
     }
 
-    public function tampilkancekup($id){
-        return view('tampilkancekup');
-    }
+   // public function tampilkancekup($id){
+
+     //   return view('tampilkancekup');
+    //}
 
 }
