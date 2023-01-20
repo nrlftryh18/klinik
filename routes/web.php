@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CekupController;
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PasienController;
 
 /*
@@ -18,15 +20,23 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/pasien', [PasienController::class, 'index'])->name('pasien');
-Route::get('/datapasien', [PasienController::class, 'index']);
-Route::get('/tambahdata', [PasienController::class, 'tambahdata'])->name('tambahdata');
-Route::post('/insertdata', [PasienController::class, 'insertdata'])->name('insertdata');
+Route::get('/pasien',[PasienController:: class, 'index'])->name('pasien');
+Route::get('/datapasien',[PasienController:: class, 'index']);
+Route::get('/tambahdata',[PasienController:: class, 'tambahdata'])->name('tambahdata');
+Route::post('/insertdata',[PasienController:: class, 'insertdata'])->name('insertdata');
 
-Route::get('/tampilkandata/{id}', [PasienController::class, 'tampilkandata'])->name('tampilkandata');
-Route::post('/updatedata/{id}', [PasienController::class, 'updatedata'])->name('updatedata');
+Route::get('/tampilkandata/{id}',[PasienController:: class, 'tampilkandata'])->name('tampilkandata');
+Route::post('/updatedata/{id}',[PasienController:: class, 'updatedata'])->name('updatedata');
 
-Route::get('/CekUp', [PasienController::class, 'CekUp'])->name('CekUp');
-Route::get('/tambahcekup', [PasienController::class, 'tambahcekup'])->name('tambahcekup');
-Route::get('/tampilkancekup/{id}', [PasienController::class, 'tampilkancekup'])->name('tampilkancekup');
-Route::get('/insertdatacekup', [PasienController::class, 'insertdatacekup'])->name('insertdatacekup');
+Route::get('/cekup',[CekupController:: class, 'index'])->name('cekup');
+Route::get('/tambahcekup',[CekupController:: class, 'tambahcekup'])->name('tambahcekup');
+Route::post('/insertdatacekup',[CekupController:: class, 'insertdatacekup'])->name('insertdatacekup');
+Route::get('/insertdatacekup',[CekupController:: class, 'insertdatacekup'])->name('insertdatacekup');
+
+
+
+Route::get('/tampilkancekup/{id}',[CekupController:: class, 'tampilkancekup'])->name('tampilkancekup');
+Route::post('/updatedatacekup/{id}',[CekupController:: class, 'updatedatacekup'])->name('updatedatacekup');
+
+
+Route::get('/login',[LoginController:: class, 'login'])->name('login');

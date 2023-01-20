@@ -25,10 +25,8 @@ class CreateCekupsTable extends Migration
             $table->string('type_veterbra');
             $table->string('type_thorax');
             $table->string('visual');
-            $table->timestamps();
         });
     }
-
     /**
      * Reverse the migrations.
      *

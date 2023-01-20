@@ -8,5 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Cekup extends Model
 {
     use HasFactory;
-    protected $guarded = [];
+
+    protected $guarded =[];
 }

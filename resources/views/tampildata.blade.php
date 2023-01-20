@@ -14,7 +14,7 @@
     <h1 class="text-center">Detail Data pasien</h1>
     <div class="container">
         
-        <a href="/CekUp" type="button" class="btn btn-info">Cek up</a>
+        <a href="/cekup" type="button" class="btn btn-info">Cek up</a>
         <div class="row justify-content-center">
             <div class="col-sm-8">
         <div class="card">

@@ -11,79 +11,78 @@
     <title>klinik</title>
 </head>
 <body>
-    <h1 class="text-center">Cek Up</h1>
+    <h1 class="text-center">Tambah Data Cek Up</h1>
     <div class="container">
-        
-        <a href="/tambahcekup" type="button" class="btn btn-info">+ Tambah</a>
         <div class="mb-3 row"> 
         <div class="row justify-content-center">
             <div class="call-10">
         <div class="card">
             <div class="card-body">
-                <form action="" method="POST">
+                <form action="/insertdatacekup" method="POST">
                     @csrf
                     <div class="mb-3 row">    
                     </div>
                     <div class="mb-2 row">
                         <label for="inputCervical" class="col-sm-2 col-form-label">CERVICAL</label>
                         <div class="col-sm-10">
-                        <input type="text" class="form-control" id="inputCervical">
+                        <input type="text" class="form-control" id="inputCervical" name="cervical">
                         </div>
                     </div>
                     <div class="mb-2 row">
                         <label for="inputThoraxal" class="col-sm-2 col-form-label">THORAXAL</label>
                         <div class="col-sm-10">
-                        <input type="text" class="form-control" id="inputThoraxal">
+                        <input type="text" class="form-control" id="inputThoraxal" name="thoraxal">
                         </div>
                     </div>
                     <div class="mb-2 row">
                         <label for="inputLumbar" class="col-sm-2 col-form-label">LUMBAR</label>
                         <div class="col-sm-10">
-                        <input type="text" class="form-control" id="inputLumbar">
+                        <input type="text" class="form-control" id="inputLumbar" name="lumbar">
                         </div>
                     </div>
                     <div class="mb-2 row">
                         <label for="inputSacral" class="col-sm-2 col-form-label">SACRAL</label>
                         <div class="col-sm-10">
-                        <input type="text" class="form-control" id="inputSacral">
+                        <input type="text" class="form-control" id="inputSacral" name="sacral">
                         </div>
                     </div>
                     <div class="mb-2 row">
                         <label for="inputPelvis" class="col-sm-2 col-form-label">PELVIS</label>
                         <div class="col-sm-10">
-                        <input type="text" class="form-control" id="inputPelvis">
+                        <input type="text" class="form-control" id="inputPelvis" name="pelvis">
                         </div>
                     </div>
                     <div class="mb-2 row">
                         <label for="inputPlintiran" class="col-sm-2 col-form-label">PLINTIRAN</label>
                         <div class="col-sm-10">
-                        <input type="text" class="form-control" id="inputPlintiran">
+                        <input type="text" class="form-control" id="inputPlintiran" name="plintiran">
                         </div></div>
                         <div class="mb-2 row">
                             <label for="inputKompresi" class="col-sm-2 col-form-label">KOMPRESI</label>
                             <div class="col-sm-10">
-                            <input type="text" class="form-control" id="inputKompresi">
+                            <input type="text" class="form-control" id="inputKompresi" name="kompresi">
                             </div>
                         </div>
                         <div class="mb-2 row">
                             <label for="inputtype_veterbra" class="col-sm-2 col-form-label">TYPE VETERBRA</label>
                             <div class="col-sm-10">
-                            <input type="text" class="form-control" id="inputType_veterbra">
+                            <input type="text" class="form-control" id="inputType_veterbra" name="type_veterbra">
                             </div>
                         </div>
                         <div class="mb-2 row">
                             <label for="inputType_thorax" class="col-sm-2 col-form-label">TYPE THORX</label>
                             <div class="col-sm-10">
-                            <input type="test" class="form-control" id="inputType_thorax">
+                            <input type="test" class="form-control" id="inputType_thorax" name="type_thorax">
                             </div>
                         </div>
                         <div class="mb-2 row">
                             <label for="inputVisul" class="col-sm-2 col-form-label">VISUAL</label>
                             <div class="col-sm-10">
-                            <input type="text" class="form-control" id="inputVisual">
+                            <input type="text" class="form-control" id="inputVisual" name="visual">
                             </div>
                         </div>
-                    
+                    <button type="submit" class="btn btn-md btn-primary">Simpan</button>
+                    {{-- <a href="/cekup" class="btn btn-primary">Simpan</a> --}}
                 </form>
             </div>
         </div>

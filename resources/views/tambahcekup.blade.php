@@ -1,102 +1,93 @@
 <!doctype html>
 <html lang="en">
-
 <head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.rtl.min.css" integrity="sha384-DOXMLfHhQkvFFp+rWTZwVlPVqdIhpDVYT9csOnHSgWQWPX0v5MCGtjCJbY6ERspU" crossorigin="anonymous">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.rtl.min.css" integrity="sha384-DOXMLfHhQkvFFp+rWTZwVlPVqdIhpDVYT9csOnHSgWQWPX0v5MCGtjCJbY6ERspU" crossorigin="anonymous">
 
-  <title>klinik</title>
+    <title>klinik</title>
 </head>
-
 <body>
-  <h1 class="text-center">Tambah Cek Up</h1>
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-sm-9">
-        <div class="mb-3">
-          <div class="mb-3 row">
-            <div class="card">
-              <div class="card-body">
-                <form action="/insertdatacekup" method="GET">
-                  @csrf
-                  <thead>
-              </div>
-              <div class="mb-3 row">
-                <label for="inputtext" class="col-sm-2 col-form-label">CERVICAL</label>
-                <div class="col-sm-9">
-                  <input type="text" name="cervical" class="form-control" id="text">
-                </div>
-              </div>
-              <div class="mb-3 row">
-                <label for="inputteks" class="col-sm-2 col-form-label">THORAXAL</label>
-                <div class="col-sm-9">
-                  <input type="text" name="thoraxal" class="form-control" id="inputtext">
-                </div>
-              </div>
-              <div class="mb-3 row">
-                <label for="inputtext" class="col-sm-2 col-form-label">LUMBAR</label>
-                <div class="col-sm-9">
-                  <input type="text" name="lumbar" class="form-control" id="inputtext">
-                </div>
-              </div>
-              <div class="mb-3 row">
-                <label for="inputtext" class="col-sm-2 col-form-label">SACRAL</label>
-                <div class="col-sm-9">
-                  <input type="text" name="sacral" class="form-control" id="inputtext">
-                </div>
-              </div>
-              <div class="mb-3 row">
-                <label for="inputtext" class="col-sm-2 col-form-label">PELVIS</label>
-                <div class="col-sm-9">
-                  <input type="text" name="pelvis" class="form-control" id="inputtext">
-                </div>
-              </div>
-              <div class="mb-3 row">
-                <label for="inputtextd" class="col-sm-2 col-form-label">PLINTIRAN</label>
-                <div class="col-sm-9">
-                  <input type="text" name="plintiran" class="form-control" id="inputtext">
-                </div>
-              </div>
-              <div class="mb-3 row">
-                <label for="inputtext" class="col-sm-2 col-form-label">KOMPRESI</label>
-                <div class="col-sm-9">
-                  <input type="text" name="kompresi" class="form-control" id="inputtext">
-                </div>
-              </div>
-              <div class="mb-3 row">
-                <label for="inputtext" class="col-sm-2 col-form-label">TYPE VETERBRA</label>
-                <div class="col-sm-9">
-                  <input type="text" name="type_veterbra" class="form-control" id="inputtext">
-                </div>
-              </div>
-              <div class="mb-3 row">
-                <label for="inputtext" class="col-sm-2 col-form-label">TYPE THORAX</label>
-                <div class="col-sm-9">
-                  <input type="text" name="type_thorax" class="form-control" id="inputtext">
-                </div>
-              </div>
-              <div class="mb-3 row">
-                <label for="inputtext" class="col-sm-2 col-form-label">VISUAL</label>
-                <div class="col-sm-9">
-                  <input type="text" name="visual" class="form-control" id="inputtext">
-                </div>
-              </div>
-              </thead>
-              <div class="mb-3">
-                <button type="submit" class="btn btn-primary">Simpan</button>
-              </div>
-              </tr>
-              </tbody>
-              </table>
-              </form>
+    <h1 class="text-center">Tambah Data Cek Up</h1>
+    <div class="container">
+        <div class="mb-3 row"> 
+        <div class="row justify-content-center">
+            <div class="call-10">
+        <div class="card">
+            <div class="card-body">
+                <form action="{{ route('insertdatacekup') }}" method="POST">
+                    @csrf
+                    <div class="mb-3 row">    
+                    </div>
+                    <div class="mb-2 row">
+                        <label for="inputCervical" class="col-sm-2 col-form-label">CERVICAL</label>
+                        <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputCervical" name="cervical">
+                        </div>
+                    </div>
+                    <div class="mb-2 row">
+                        <label for="inputThoraxal" class="col-sm-2 col-form-label">THORAXAL</label>
+                        <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputThoraxal" name="thoraxal">
+                        </div>
+                    </div>
+                    <div class="mb-2 row">
+                        <label for="inputLumbar" class="col-sm-2 col-form-label">LUMBAR</label>
+                        <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputLumbar" name="lumbar">
+                        </div>
+                    </div>
+                    <div class="mb-2 row">
+                        <label for="inputSacral" class="col-sm-2 col-form-label">SACRAL</label>
+                        <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputSacral" name="sacral">
+                        </div>
+                    </div>
+                    <div class="mb-2 row">
+                        <label for="inputPelvis" class="col-sm-2 col-form-label">PELVIS</label>
+                        <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputPelvis" name="pelvis">
+                        </div>
+                    </div>
+                    <div class="mb-2 row">
+                        <label for="inputPlintiran" class="col-sm-2 col-form-label">PLINTIRAN</label>
+                        <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputPlintiran" name="plintiran">
+                        </div></div>
+                        <div class="mb-2 row">
+                            <label for="inputKompresi" class="col-sm-2 col-form-label">KOMPRESI</label>
+                            <div class="col-sm-10">
+                            <input type="text" class="form-control" id="inputKompresi" name="kompresi">
+                            </div>
+                        </div>
+                        <div class="mb-2 row">
+                            <label for="inputtype_veterbra" class="col-sm-2 col-form-label">TYPE VETERBRA</label>
+                            <div class="col-sm-10">
+                            <input type="text" class="form-control" id="inputType_veterbra" name="type_veterbra">
+                            </div>
+                        </div>
+                        <div class="mb-2 row">
+                            <label for="inputType_thorax" class="col-sm-2 col-form-label">TYPE THORX</label>
+                            <div class="col-sm-10">
+                            <input type="test" class="form-control" id="inputType_thorax" name="type_thorax">
+                            </div>
+                        </div>
+                        <div class="mb-2 row">
+                            <label for="inputVisul" class="col-sm-2 col-form-label">VISUAL</label>
+                            <div class="col-sm-10">
+                            <input type="text" class="form-control" id="inputVisual" name="visual">
+                            </div>
+                        </div>
+                    <button type="submit" class="btn btn-md btn-primary">Simpan</button>
+                    {{-- <a href="/cekup" class="btn btn-primary">Simpan</a> --}}
+                </form>
             </div>
-          </div>
         </div>
-      </div>
+        </div>  
+        </div>
     </div>
 
 
@@ -111,5 +102,4 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
     -->
 </body>
-
 </html>
